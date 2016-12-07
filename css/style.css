@@ -1,0 +1,99 @@
+html,
+body {
+  font-family: 'Bad Script', cursive;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+input {
+  font-size: 12px;
+  width: 250px;
+  height: 30px;
+}
+
+
+#map {
+  bottom:0px;
+  height: 100%;
+  left: 0;
+  right: 0px;
+}
+
+#iw_container .iw_title {
+  font-family: 'Armata', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.iw_content {
+  font-family: 'Handlee', cursive;
+  padding: 15px 15px 15px 0;
+  font-size: 16px;
+}
+
+.placelist {
+  list-style-type: none;
+  background-color: #fbd897;
+  text-align: center;
+  padding-left: 0;  
+  font-weight: bolder;
+}
+
+ul{
+  padding-left: 0px;
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #f8b230;
+  transform: translate3d(-300px, 0, 0);
+  transition: transform 0.4s ease;
+}
+.active-nav nav {
+  transform: translate3d(0, 0, 0);
+}
+nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+}
+            
+.nav-toggle-btn {
+  display: block;
+  position: absolute;
+  left: 300px;
+  width: 30px;
+  height: 30px;
+  padding: 15px 20px 15px 15px;
+  background-color: #fac96e;
+  color: white;
+  cursor: pointer;
+  margin-top: 300px;
+}
+
+#form-container {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+label {
+  font-size: 30px;
+}
