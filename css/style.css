@@ -3,13 +3,21 @@ body {
   font-family: 'Bad Script', cursive;
   height: 100%;
   margin: 0;
+  font-size: 14px;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .container {
   height: 100%;
   position: relative;
+}
+
+.topbar{
+height: 50px;
+background-color: #fac96e;
+text-align: center;
+font-size: 27px;
+font-weight: bolder;
 }
 
 input {
@@ -18,12 +26,9 @@ input {
   height: 30px;
 }
 
-
 #map {
-  bottom:0px;
-  height: 100%;
-  left: 0;
-  right: 0px;
+  width: 100%;
+  height: calc(100% - 50px);
 }
 
 #iw_container .iw_title {
@@ -42,7 +47,8 @@ input {
   background-color: #fbd897;
   text-align: center;
   padding-left: 0;  
-  font-weight: bolder;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 ul{
@@ -62,6 +68,7 @@ nav {
 .active-nav nav {
   transform: translate3d(0, 0, 0);
 }
+
 nav ul {
   list-style: none;
   margin-top: 20px;
@@ -81,12 +88,11 @@ nav ul li a {
   position: absolute;
   left: 300px;
   width: 30px;
-  height: 30px;
-  padding: 15px 20px 15px 15px;
+  height: 25px;
+  padding: 10px 20px 15px 15px;
   background-color: #fac96e;
   color: white;
   cursor: pointer;
-  margin-top: 300px;
 }
 
 #form-container {
