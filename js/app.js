@@ -1,6 +1,7 @@
 //necessary variables
 var map,
     infowindow,
+    infoWindows = [],
     windowContent,
     i;
 /*=====================MODEL===========================*/
@@ -151,13 +152,13 @@ function createMarker(location){
    });
 }
 /*========= Foursquare API ===========*/
-var foursquareurl = 'https://api.foursquare.com/v2/venues/search?',
+var baseUrl = 'https://api.foursquare.com/v2/venues/search?',
     clientId = 'MN3FMY4RCEGAZSIKWESCS4QNBPJ3MDYPCKAA0BKUHXPORZQN',
     clientSecret = 'SVE0CF4VKHVDNU1VSG3GQKFJWGCKPNLDJDDSCC5SXG1BZ22P';
 
-function getVenueDetails(index, infoWindowCallback) {
-  fs_url = foursquareurl + '&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20161207&query=' + Model[index].id + '&ll=11.93,79.82';
-  $.getJSON(fs_url)
+function getVenueDetails(location, infoWindowCallback) {
+  foursquareUrl = baseUrl + '&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20161207&query=' + Model[location].id + '&ll=11.93,79.82';
+  $.getJSON(foursquareUrl)
   .done(function(data){
     var currentVenue = data.response.venues[0];
     var placeName = currentVenue.name;
@@ -174,11 +175,11 @@ function getVenueDetails(index, infoWindowCallback) {
 }
 
 var place = function(data) {
+  this.id = ko.observable(data.id);
   this.name = ko.observable(data.name);
   this.address = ko.observable(data.address);
   this.location = ko.observable(data.location);
   this.marker = ko.observable(data.marker);
-  this.listVisible = ko.observable(true);
 }
 
 var ViewModel = function() {
