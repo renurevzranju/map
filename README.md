@@ -4,6 +4,8 @@ Front-End Web Developer Nanodegree Course Fifth Project <a href="http://www.udac
 
 The Neighborhood Map is created using ```Google Map API``` and ```FourSquare API```. The code was structured using the M-V-VM model (ie..) <a href="https://knockoutjs.com">Knockout JS</a> which is used to develop a single-page application featuring a map of my neighborhood, adding additional functionality to this application.
 
+---------------------------------------------
+
 ## Getting started
 ### To run the application
 
@@ -16,6 +18,7 @@ The Neighborhood Map is created using ```Google Map API``` and ```FourSquare API
   ```
 
 3. Open a browser and visit localhost:8080
+
 -------------------------------------------
 
 ### To create the production version
