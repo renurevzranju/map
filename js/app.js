@@ -71,7 +71,7 @@ var Model = [
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
   map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: 11.93369, lng: 79.827958}, //Puducherry lat and lng
+  center: {lat: 11.93, lng: 79.83}, //Puducherry lat and lng
   zoom: 17
   });
 
@@ -169,7 +169,7 @@ function getVenueDetails(location, infoWindowCallback) {
     var placeName = venue.name;
     var placeAddress = venue.location.formattedAddress;
     var placePhonenos = (venue.contact.formattedPhone === undefined)? 'None': venue.contact.formattedPhone;
-    windowContent = '<div id="iw_container"><p><strong>Name: </strong>' + placeName+ '</p>' +
+    windowContent = '<div id="iw_container"><p><strong>Name: </strong>' + placeName + '</p>' +
                     '<p><strong>Address: </strong>  ' + placeAddress + '</p>' +
                     '<p><strong>Phone: </strong>' + placePhonenos + '</p></div>';
     infoWindowCallback(windowContent);
@@ -214,6 +214,10 @@ var ViewModel = function() {
   self.allPlaces().forEach(function(place) {
     self.visiblePlaces.push(place);
   });
+  //while clicked the places displayed on the list it directs you to the marker
+  self.clickOnVisiblePlace = function(place, marker){
+    google.maps.event.trigger(place.marker(), 'click');
+  };
   //Filter the places to get to the query
   self.filterMarkers = function() {
     //query is converted to lowercase
