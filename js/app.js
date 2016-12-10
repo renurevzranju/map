@@ -86,7 +86,12 @@ function initMap() {
    // Finally displayMarkers() function is called to begin the markers creation
    displayMarkers();
    //binding the viewModel 
-   ko.applyBindings (new ViewModel);
+   ko.applyBindings (new ViewModel());
+}
+
+// Create an alert if Google Maps doesn't respond
+function googleError() {
+    alert("Google is not responding. Check your connection or come back later.");
 }
 
 // This function will iterate over markersData array
@@ -141,7 +146,7 @@ function createMarker(location){
       getVenueDetails(location, function(windowContent){
         // including content to the Info Window.
         infoWindow.setContent(windowContent);
-        console.log(infoWindow);
+        //console.log(infoWindow);
         // opening the Info Window in the current map and at the current marker location.
         infoWindow.open(map, self);
       });
@@ -175,7 +180,8 @@ function getVenueDetails(location, infoWindowCallback) {
     infoWindowCallback(windowContent);
     //console.log(windowContent);
   }).fail(function(error){
-      infoWindow.setContent('Fail to connect to Foursquare: ' + error);
+      windowContent = 'Fail to connect to Foursquare';
+      infoWindowCallback(windowContent);
     }
   );
 }
@@ -203,10 +209,10 @@ var ViewModel = function() {
   self.query = ko.observable('');
   self.allPlaces = ko.observableArray([]);
   //Push all the place details to allPlaces observableArray
-  for (i = 0; i < Model.length; i++) {
-    var newPlace = new place(Model[i]);
-    self.allPlaces.push(newPlace);
-  };
+  Model.forEach(function(place){
+    self.allPlaces.push(place);
+  })
+  
   // visibleArray is used to show the place list in the side bar
   self.visiblePlaces = ko.observableArray();
   // All places should be visible at first. We only want to remove them if the
@@ -240,4 +246,3 @@ var ViewModel = function() {
     });
   };
 }
-

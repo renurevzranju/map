@@ -1,15 +1,15 @@
 # Neighborhood Map project
 
-Front-End Web Developer Nanodegree Course Fifth Project <a href="http://www.udacity.com" target="_blank">Udacity</a><br>
+Front-End Web Developer Nanodegree Course Fifth Project [Udacity](https://udacity.com)<br>
 
-The Neighborhood Map is created using ```Google Map API``` and ```FourSquare API```. The code was structured using the M-V-VM model (ie..) <a href="https://knockoutjs.com">Knockout JS</a> which is used to develop a single-page application featuring a map of my neighborhood, adding additional functionality to this application.
+The Neighborhood Map is created using ```Google Map API``` and ```FourSquare API```. The code was structured using the M-V-VM model (ie..) [Knockout JS](https://knockoutjs.com) which is used to develop a single-page application featuring a map of my neighborhood, adding additional functionality to this application.
 
 ---------------------------------------------
 
 ## Getting started
 ### To run the application
 
-1. Download the repository <a href="https://github.com/renurevzranju/map">Neighborhood Map Project</a> to your Desktop
+1. Download the repository [Neighborhood Map Project](https://github.com/renurevzranju/map) to your Desktop
 2. To inspect the site on your phone, you can run a local server
 
   ```bash
@@ -19,7 +19,7 @@ The Neighborhood Map is created using ```Google Map API``` and ```FourSquare API
 
 3. Open a browser and visit localhost:8080
 
-4. You can open the Map here <a href="https://renurevzranju.github.io/map">Neighborhood Map</a>
+4. You can open the Map here [Neighborhood Map](https://renurevzranju.github.io/map)
 
 -------------------------------------------
 
@@ -32,7 +32,7 @@ Then you go to the console, go inside the project folder, type "grunt" and click
 
 The /dest/ folder will be created, with all the HTML files, and the subfolders of css and js minized. 
 
-To install grunt, <a href="http://gruntjs.com/getting-started" target="_blank">follow this instructions</a>. 
+To install grunt, [follow this instructions](http://gruntjs.com/getting-started).
 
 -----------------------------------------------
 ###License
